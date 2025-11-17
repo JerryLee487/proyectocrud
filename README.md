@@ -57,3 +57,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Para llevar este proyecto a producción, configuré un entorno distribuido utilizando Render para la base de datos y Railway para desplegar la aplicación Laravel directamente desde GitHub.
+Primero, creé una base de datos PostgreSQL en Render y configuré las credenciales en el archivo .env. Luego subí el proyecto a un repositorio de GitHub y lo conecté a Railway, donde configuré el proceso de build (npm run build y php artisan serve --host=0.0.0.0 --port=$PORT) y el comando de ejecución de Laravel. Railway se encargó del deployment automático y de generar la URL pública del proyecto. A partir de allí, ajusté las variables de entorno necesarias para que el CRUD funcionara correctamente en producción.
